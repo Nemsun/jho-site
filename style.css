@@ -1,0 +1,51 @@
+body {
+    background-color: #FDFD96;
+}
+
+.jho-img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    border-radius: 50px;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-love {
+    margin-top: 30px;
+    margin-right: 12px;
+    margin-left: 12px;
+    font-size: 100px;
+    border: none;
+    background: #ff6961;
+    border-radius: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+.btn-reset {
+    margin-top: 30px;
+    font-size: 100px;
+    border: none;
+    background: #ff6961;
+    border-radius: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+p {
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    font-size: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
