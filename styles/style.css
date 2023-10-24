@@ -12,44 +12,40 @@
     --black-olive: #4A4A42;
     --slate-gray:#707880;
     --pink: #D594A1;
-    --font-family: 'Satoshi-Regular';
+    --font-family: "Satoshi-Regular";
 }
 
 body {
     background-color: var(--yellow);
     color: var(--white);
+    text-shadow: 0px 0px 5px var(--black);
     margin: 0;
     padding: 0;
     font-family: var(--font-family);
 }
 
 main {
-    /* margin-left: 5rem; */
+    margin-left: 5rem;
 }
 
 .container {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    grid-auto-flow: dense;
 }
 
 .header {
-    grid-column: 1 / -1;
+    grid-row: span 2;
 }
 
 .content {
-    grid-column: 1 / -1;
-}
-
-#content-button {
-    grid-column: 2 / -1;
-    grid-row: 3;
+    grid-row: span 2;
 }
 
 .jho-img {
     height: 400px;
     width: 400px;
-    margin: 0 auto;
     background-image: url("/common/images/jho_kid.jpg");
     background-size: cover;
     border: 4px solid var(--red);
@@ -61,13 +57,17 @@ main {
     background-size: contain;
 }
 
-.btn-wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 0 0 10px 0;
+.jho-img-header {
+    margin: 0 0 0 32px;
+    display: inline;
 }
 
-.play-section {
+.jho-img-header {
+    margin-top: 12px;
+    font-family: "Satoshi-BoldItalic";
+}
+
+.content-flex-center-wrapper {
     display: flex;
     justify-content: center;
 }
@@ -75,13 +75,22 @@ main {
 .container-i-love-you {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100%,1fr));
+    margin-top: 20px;
 }
 
 .message {
     font-weight: bold;
-    /* font-family: 'Comic Sans MS', sans-serif; */
     text-align: center;
     font-size: 100px;
-    margin: 10px 0;
-    text-shadow: 0px 0px 5px var(--black);
+    margin: 0;
+    text-shadow: 0 0 5px var(--black);
+}
+
+.red-text {
+    color: var(--red);
+    text-shadow: 0 0 5px var(--red);
+}
+
+.italic-text {
+    font-family: "Satoshi-BoldItalic";
 }
