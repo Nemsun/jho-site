@@ -23,20 +23,15 @@ body {
 .container {
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 }
 
 .header {
     grid-column: 1 / -1;
 }
 
-#header-img {
-    grid-row: 2;
-}
-
 .menu {
-    grid-column: 1 / -1;
-    grid-row: 1;
+    grid-row: 1 / -1;
 }
 
 .content {
@@ -66,6 +61,7 @@ body {
 .btn-wrapper {
     display: flex;
     justify-content: center;
+    margin: 0 0 10px 0;
 }
 
 .play-section {
@@ -75,7 +71,7 @@ body {
 
 .container-i-love-you {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(auto-fit, minmax(100%,1fr));
     grid-template-rows: auto;
 }
 
