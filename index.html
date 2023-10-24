@@ -4,34 +4,41 @@
         <link rel="stylesheet" href="/styles/style.css">
         <link rel="stylesheet" href="/styles/button.css">
         <link rel="stylesheet" href="/styles/navbar.css">
-        <link rel="stylesheet" href="/styles/containers.css">
+        <link rel="stylesheet" href="/styles/scrollbar.css">
         <link rel="stylesheet" href="fonts/satoshi.css">
         <title>For my lovely girl hehe <3 </title>
     </head>
     <body>
-        <div class="container">
-            <div class="header" id="header-img">
-                <div class="jho-img"></div>
-            </div>
-            <div class="menu">
-                <nav class="navbar">
-                    <a>home</a>
-                </nav>
-            </div>
-            <div class="content" id="content-btn">
-                <div class="btn-wrapper">
-                    <button class="btn" onclick="sendMessage()"><span>click me!</span></button>
-                    <button class="btn" onclick="reset()"><span>reset</span></button>
-                    <script src="index.js"></script>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="link-text">Home</span>
+                        
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="container">
+                <div class="header" id="header-img">
+                    <div class="jho-img"></div>
                 </div>
-                <div class="play-section">
+                <div class="content" id="content-btn">
                     <div class="btn-wrapper">
-                        <button class="btn" onclick="play()"><span>do not click!</span></button>
+                        <button class="btn" onclick="sendMessage()"><span>click me!</span></button>
+                        <button class="btn" onclick="reset()"><span>reset</span></button>
+                        <script src="index.js"></script>
+                    </div>
+                    <div class="play-section">
+                        <div class="btn-wrapper">
+                            <button class="btn" onclick="play()"><span>do not click!</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container-i-love-you">
-        </div>
+            <div class="container-i-love-you">
+            </div>
+        </main>
     </body>
 </html>

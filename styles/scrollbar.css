@@ -1,0 +1,14 @@
+@import url("/styles/style.css");
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--slate-gray);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--red);
+    border-radius: 5px;
+}

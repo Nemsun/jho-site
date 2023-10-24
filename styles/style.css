@@ -1,23 +1,30 @@
 @import url("/fonts/satoshi.css");
 
+:root {
+    --red: #FF6961;
+    --dark-red: #C04F49;
+    --garnet: #803531;
+    --chestnut: #A0423D;
+    --yellow: #FDFD96;
+    --white: #FAF9F6;
+    --black: #222222;
+    --gray: #404040;
+    --black-olive: #4A4A42;
+    --slate-gray:#707880;
+    --pink: #D594A1;
+    --font-family: 'Satoshi-Regular';
+}
+
 body {
     background-color: var(--yellow);
     color: var(--white);
     margin: 0;
+    padding: 0;
     font-family: var(--font-family);
 }
 
-:root {
-    --red: #ff6961;
-    --dark-red: #C04F49;
-    --garnet: #803531;
-    --chestnut: #A0423D;
-    --yellow: #fdfd96;
-    --white: #FBFAF5;
-    --black: #222222;
-    --gray: #404040;
-    --pink: #D594A1;
-    --font-family: 'Satoshi-Regular';
+main {
+    /* margin-left: 5rem; */
 }
 
 .container {
@@ -28,10 +35,6 @@ body {
 
 .header {
     grid-column: 1 / -1;
-}
-
-.menu {
-    grid-row: 1 / -1;
 }
 
 .content {
@@ -72,7 +75,6 @@ body {
 .container-i-love-you {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100%,1fr));
-    grid-template-rows: auto;
 }
 
 .message {
