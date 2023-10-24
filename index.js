@@ -1,9 +1,10 @@
-function message() {
-    let p = document.createElement("p")
-    let msg = document.createTextNode("I LOVE YOU!!!!")
-    p.classList.add("message")
-    p.appendChild(msg)
-    document.body.appendChild(p)
+function sendMessage() {
+    const gridContainer = document.querySelector(".container-i-love-you");
+    const newMessage = document.createElement("div");
+    newMessage.classList.add("message")
+    newMessage.textContent = "I LOVE YOU!!!";
+    gridContainer.appendChild(newMessage);
+    
 }
 
 function reset() {
