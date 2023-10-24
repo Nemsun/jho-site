@@ -1,0 +1,54 @@
+@import url("/fonts/satoshi.css");
+
+body {
+    background-color: var(--yellow);
+    color: var(--white);
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+:root {
+    --red: #ff6961;
+    --dark-red: #C04F49;
+    --garnet: #803531;
+    --chestnut: #A0423D;
+    --yellow: #fdfd96;
+    --white: #FBFAF5;
+    --black: #222222;
+    --gray: #404040;
+    --pink: #D594A1;
+    --font-family: 'Satoshi-Regular';
+}
+
+.jho-img {
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    background-image: url("/common/images/jho_kid.jpg");
+    background-size: cover;
+    border: 4px solid var(--red);
+    border-radius: 10%;
+}
+
+.jho-img:hover {
+    background-image: url("/common/images/jho_sturdy.gif");
+    background-size: contain;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.play-section {
+    display: flex;
+    justify-content: center;
+}
+.message {
+    font-weight: bold;
+    /* font-family: 'Comic Sans MS', sans-serif; */
+    text-align: center;
+    font-size: 100px;
+    margin: 10px 0;
+    text-shadow: 0px 0px 5px var(--black);
+}

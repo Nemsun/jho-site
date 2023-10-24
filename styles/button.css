@@ -1,0 +1,49 @@
+* {
+    font-family: var(--font-family);
+}
+
+.btn {
+    width: 400px;
+    margin: 30px 12px 0px 12px;
+    font-size: 40px;
+    border: none;
+    background: var(--red);
+    border-radius: 15px;
+    padding: 12px;
+    color: inherit;
+    text-shadow: 5px 0 2px var(--black);
+    box-shadow: 0 12px var(--dark-red);
+    cursor: pointer;
+}
+
+.btn:hover {
+    text-shadow: 5px 0px 0px var(--black);
+    background: var(--garnet);
+}
+
+.btn:active {
+    box-shadow: 0 8px var(--chestnut);
+    transform: translateY(4px);
+}
+
+.btn span {
+    position:relative;
+}
+
+.btn span:after {
+    content: '😩';
+    position: absolute;
+    bottom: -2px;
+    opacity: 0;
+}
+
+.btn:hover span {
+    padding-right: 40px;
+    transition-duration: 0.5s;
+}
+
+.btn:hover span:after {
+    opacity: 1;
+    transition-duration: 0.5s;
+    right: -20px;
+}
