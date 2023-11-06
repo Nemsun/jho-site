@@ -26,15 +26,8 @@ body {
     font-family: var(--font-family);
 }
 
-main {
-    margin-left: 5rem;
-}
-
 .container {
-    height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-    grid-auto-flow: dense;
 }
 
 .header {
@@ -46,8 +39,6 @@ main {
 }
 
 .jho-img {
-    height: 500px;
-    width: 500px;
     background-size: cover;
     background-position: center;
     border: 4px solid var(--red);
@@ -70,9 +61,6 @@ main {
 
 #jho_quirky:hover {
     background-image: url("/common/images/jho_bright.png");
-    background-size: 200%;
-    background-position-y: -790px;
-    background-position-x: -265px;
 }
 
 .jho-img-header {
@@ -88,16 +76,13 @@ main {
 }
 
 .container-i-love-you {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100%,1fr));
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .message {
     font-weight: bold;
     text-align: center;
-    font-size: 100px;
-    margin: 0;
     text-shadow: 0 0 5px var(--black);
 }
 
@@ -116,4 +101,50 @@ main {
 
 .large-font {
     font-size: 4rem;
+}
+
+/* Small Screens */
+@media only screen and (max-width: 600px) {
+    .container {
+        height: 0;
+    }
+    .container-i-love-you {
+        margin-top: 450px;
+    }
+    .jho-img-header {
+        font-size: 22px;
+    }
+    .jho-img {
+        height: 200px;
+        width: 200px;
+    }
+    .message {
+        font-size: 70px;
+    }
+    #jho_quirky:hover {
+        background-size: 200%;
+        background-position: -505px -315px;
+    }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+    .container {
+        height: 100vh;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+    .jho-img {
+        min-height: 500px;
+        min-width: 500px;
+    }
+    .container-i-love-you {
+        margin-top: 100px;
+    }
+    .message {
+        font-size: 200px;
+    }
+    #jho_quirky:hover {
+        background-size: 200%;
+        background-position: -265px -790px;
+    }
 }

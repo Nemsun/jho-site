@@ -4,7 +4,7 @@ function sendMessage() {
     newMessage.classList.add("message")
     newMessage.textContent = "I LOVE JHO!!!";
     gridContainer.appendChild(newMessage);
-    
+
 }
 
 function reset() {

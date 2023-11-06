@@ -1,7 +1,7 @@
 @import url("/styles/style.css");
 
 .navbar {
-    position: fixed; 
+    position: fixed;
     background-color: var(--red);
     transition: 0.3s ease;
 }
@@ -86,7 +86,7 @@ color: var(--chinese-violet);
 .fa-secondary {
 transition: 0.3s;
 }
-  
+
 
 .logo svg {
     transform: rotate(0deg);
@@ -102,9 +102,10 @@ transition: 0.3s;
     .navbar {
         bottom: 0;
         width: 100vw;
-        height: 5rem;
+        height: 3rem;
+        overflow-x: hidden;
     }
-    
+
     .logo {
         display: none;
     }
@@ -115,10 +116,11 @@ transition: 0.3s;
 
     .nav-link {
         justify-content: center;
+        height: 3rem;
     }
 
     main {
-        margin: 0;
+        margin-left: 0;
     }
 }
 
@@ -136,5 +138,9 @@ transition: 0.3s;
 
     .navbar:hover .link-text {
         display: inline;
+    }
+
+    main {
+        margin-left: 5rem;
     }
 }
