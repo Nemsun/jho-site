@@ -5,6 +5,7 @@
     --tuft-blue: #3292E5;
     --ucla-blue: #2E76B5;
     --lapis-lazuli: #2B6191;
+    --spotify-green: #1ED760;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
 main {
     margin-left: 5rem;
 }
+
 .card-container {
     display: flex;
     justify-content: center;
@@ -26,7 +28,7 @@ main {
     display: block;
     margin: 10px auto 10px auto;
     border: 1px solid blue;
-    height: 96vh;
+    min-height: 96vh;
     width: 428px;
     background-image: linear-gradient(180deg,var(--lapis-lazuli) , var(--black));
     border-radius: 32px;
@@ -140,27 +142,73 @@ svg {
     fill: var(--white);
 }
 
+.audio-icons:hover {
+    cursor: pointer;
+    fill: var(--slate-gray);
+    transition: 0.2s ease-in-out;
+}
+
+.audio-icons:active {
+    fill: var(--white);
+    transition: 0s;
+}
+
 .progress-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
 .time-container {
     display: flex;
     justify-content: space-between;
-    width: 85%;
+    width: 84.2%;
     font-size: 10px;
     color: var(--slate-gray);
 }
 
 .seek-slider-container {
+    --seek-before-width: 0%;
+    --buffered-width: 0%;
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 10px;
 }
 
-#seek-slider {
-    width: 85%;
-    margin: 0;
+input[type="range"] {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22.2rem;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
 }
+
+input[type="range"]::-webkit-slider-runnable-track {
+    border-radius: 5px;
+    height: 0.3rem;
+    background: linear-gradient(to right, var(--slate-gray) var(--buffered-width), var(--slate-gray) var(--buffered-width));
+}
+
+input[type="range"]::before {
+    position: absolute;
+    content: "";
+    width: var(--seek-before-width);
+    height: 0.3rem;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--white);
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    margin-top: -0.35rem;
+}
+

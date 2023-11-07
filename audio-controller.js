@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
     let state = 'play';
 
     const playIconContainer = document.getElementById('play-button');
+    const seekSliderContainer = document.querySelector('.seek-slider-container');
+    const seekSlider = document.getElementById('seek-slider');
 
     playIconContainer.addEventListener('click', () => {
         if (state === 'play') {
@@ -11,5 +14,16 @@ document.addEventListener('DOMContentLoaded', function() {
             playIconContainer.innerHTML = '<svg id="play-icon" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg"><circle cx="29.5" cy="29.5" r="29.5"/><path d="M22 41L41 29.5L22 18V41Z" fill="#222222"/></svg>';
             state = 'play';
         }
+    });
+
+    const showRangeProgress = (rangeInput) => {
+        if (rangeInput === seekSlider) {
+            seekSliderContainer.style.setProperty('--seek-before-width', rangeInput.value / rangeInput.max * 100 + '%');
+        }
+        console.log(rangeInput.value / rangeInput.max * 100 + '%');
+    }
+    
+    seekSlider.addEventListener('input', (e) => {
+        showRangeProgress(e.target);
     });
 });
