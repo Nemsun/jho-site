@@ -5,7 +5,10 @@
         <link rel="stylesheet" href="/styles/button.css">
         <link rel="stylesheet" href="/styles/navbar.css">
         <link rel="stylesheet" href="/styles/scrollbar.css">
-        <link rel="stylesheet" href="fonts/satoshi.css">
+        <link rel="stylesheet" href="/fonts/satoshi.css">
+        <link rel="stylesheet" href="/styles/sudoku.css">
+        <script src="scripts/button.js"></script>
+        <script src="scripts/sudoku.js"></script>
         <title>SUDOKU FOR YOU</title>
     </head>
     <body>
@@ -39,7 +42,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <script src="button.js"></script>
+                        
                     </li>
                     <li class="nav-item">
                         <a href="/index.html" class="nav-link">
@@ -88,7 +91,13 @@
                 </ul>
             </nav>
         <main>
-            sudoku
+            <h1 class="title">SU<span class="yellow-font">JHO</span>KU</h1>
+            <hr>
+            <h2 id="errors">0</h2>
+            <!-- 9x9 board -->
+            <div id="board"></div>
+            <br>
+            <div id="digits"></div>
         </main>
     </body>
 </html>
