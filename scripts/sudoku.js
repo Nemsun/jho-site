@@ -68,6 +68,9 @@ function selectTile() {
             document.getElementById("errors").innerText = errors;
         }
     }
+    if (checkWin()) {
+        alert("YOU WIN!!!");
+    }
 }
 
 function populateSolution() {
@@ -151,4 +154,16 @@ function generatePuzzle(solution) {
 
     randomizeBoard(puzzleBoard);
     board = puzzleBoard;
+}
+
+function checkWin() {
+    for (let r = 0; r < 9; r++) {
+        for (let c = 0; c < 9; c++) {
+            const tile = document.getElementById(r.toString() + "-" + c.toString());
+            if (tile.innerText !== solution[r][c]) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
