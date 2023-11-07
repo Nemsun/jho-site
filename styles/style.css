@@ -31,6 +31,7 @@ body {
 }
 
 .header {
+    display: grid;
     grid-row: span 2;
 }
 
@@ -78,6 +79,8 @@ body {
 .container-i-love-you {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .message {
@@ -136,9 +139,6 @@ body {
     .jho-img {
         min-height: 500px;
         min-width: 500px;
-    }
-    .container-i-love-you {
-        margin-top: 100px;
     }
     .message {
         font-size: 200px;
