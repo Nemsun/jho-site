@@ -1,0 +1,7 @@
+@import url("/styles/style.css");
+
+body {
+    background-image: url("/common/assets/peony.png");
+    background-size: 72%;
+    background-position: center top;
+}
